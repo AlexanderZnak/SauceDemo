@@ -16,6 +16,7 @@ b) mvn clean test -Dtest=CheckoutTest#cancel+emptyLastName
 a) mvn clean test -Dtest=LoginTest#AuthorizationWithInvalidData -Dbla=bla -Dbla2=bla
 b) mvn clean test -Dbrowser=chrome -Dtest=OverviewTest
 c) mvn clean test -Dbrowser=opera -Dtest=OverviewTest
+d)
 
 
 
