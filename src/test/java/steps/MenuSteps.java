@@ -21,8 +21,9 @@ public class MenuSteps {
 
     @Step("Going to link: '{linkName}' from the burger menu")
     public MenuSteps goToLink(String linkName) {
+        productsPage
+                .openPage();
         menuPage
-                .openPage()
                 .clickMenu()
                 .goToLink(linkName);
         return this;

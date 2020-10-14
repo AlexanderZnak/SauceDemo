@@ -14,8 +14,8 @@ public class CheckoutPage extends BasePage {
     public static final By FIRST_NAME = By.id("first-name");
     public static final By LAST_NAME = By.id("last-name");
     public static final By ZIP_CODE = By.id("postal-code");
-    public static final By CONTINUE = By.cssSelector("[class='btn_primary cart_button']");
-    public static final By CANCEL = By.cssSelector("[class='cart_cancel_link btn_secondary']");
+    public static final By CONTINUE = By.cssSelector(".btn_primary.cart_button");
+    public static final By CANCEL = By.cssSelector(".cart_cancel_link.btn_secondary");
 
     public CheckoutPage(WebDriver driver) {
         super(driver);
@@ -34,7 +34,7 @@ public class CheckoutPage extends BasePage {
 
     @Step("Opening checkout page")
     public CheckoutPage openPage() {
-        driver.get("https://www.saucedemo.com/checkout-step-one.html");
+        driver.get(URL + "/checkout-step-one.html");
         isPageOpened();
         AllureUtils.takeScreenshot(driver);
         return this;

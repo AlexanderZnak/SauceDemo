@@ -6,26 +6,21 @@ import org.openqa.selenium.WebDriver;
 import utils.AllureUtils;
 
 public class ItemPage extends BasePage {
-    public static final By ITEM_NAME = By.cssSelector("[class='inventory_details_name']");
-    public static final By BUTTON_BACK = By.cssSelector("[class='inventory_details_back_button']");
+    public static final By ITEM_NAME = By.cssSelector(".inventory_details_name");
+    public static final By BUTTON_BACK = By.cssSelector(".inventory_details_back_button");
 
     public ItemPage(WebDriver driver) {
         super(driver);
     }
 
-    @Step("Checking whether the item page opened")
+    @Deprecated
     public ItemPage isPageOpened() {
-        new ProductsPage(driver).isPageOpened();
-        AllureUtils.takeScreenshot(driver);
         return this;
     }
 
-    @Step("Opening product page")
-    public ProductsPage openPage() {
-        driver.get("https://www.saucedemo.com/inventory.html");
-        isPageOpened();
-        AllureUtils.takeScreenshot(driver);
-        return new ProductsPage(driver);
+    @Deprecated
+    public ItemPage openPage() {
+        return this;
     }
 
     @Step("Get name of item")

@@ -14,15 +14,15 @@ import java.util.List;
 import static org.testng.Assert.fail;
 
 public class ProductsPage extends BasePage {
+    public static final By LOCATORS_FOR_NAMES = By.cssSelector(".inventory_item_name");
+    public static final By LOCATORS_FOR_PRICES = By.cssSelector(".inventory_item_price");
+    public static final By SELECT_FOR_SORT = By.cssSelector(".product_sort_container");
     String productLocatorForAdd = "//*[contains(text(),'%s')]/ancestor::div[@class='inventory_item']//*[text()='ADD TO CART']";
     String productLocatorForRemove = "//*[contains(text(),'%s')]/ancestor::div[@class='inventory_item']//*[text()='REMOVE']";
     String nameOfItem = "//*[text()='%s']";
     String locatorForClickByImg = "//*[contains(text(),'%s')]/ancestor::div[@class='inventory_item']//img[@class='inventory_item_img']";
     ArrayList<WebElement> products;
     List<WebElement> items;
-    public static final By LOCATORS_FOR_NAMES = By.cssSelector("[class='inventory_item_name']");
-    public static final By LOCATORS_FOR_PRICES = By.cssSelector("[class='inventory_item_price']");
-    public static final By SELECT_FOR_SORT = By.cssSelector("[class='product_sort_container']");
 
     public ProductsPage(WebDriver driver) {
         super(driver);
@@ -42,7 +42,7 @@ public class ProductsPage extends BasePage {
 
     @Step("Opening products page")
     public ProductsPage openPage() {
-        driver.get("https://www.saucedemo.com/inventory.html");
+        driver.get(URL + "/inventory.html");
         isPageOpened();
         AllureUtils.takeScreenshot(driver);
         return this;

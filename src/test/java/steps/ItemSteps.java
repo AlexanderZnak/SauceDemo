@@ -18,7 +18,7 @@ public class ItemSteps {
 
     @Step("Clicking on the product: '{itemName}' by the name")
     public ItemSteps clickByName(String itemName) {
-        itemPage
+        productsPage
                 .openPage()
                 .clickOnName(itemName);
         return this;
@@ -26,13 +26,13 @@ public class ItemSteps {
 
     @Step("Clicking on the product: '{itemName}' by the img")
     public ItemSteps clickByImg(String itemName) {
-        itemPage
+        productsPage
                 .openPage()
                 .clickOnImg(itemName);
         return this;
     }
 
-    @Step("")
+    @Step("Going back to the previous page")
     public ItemSteps clickButtonBack() {
         itemPage.clickButtonBack();
         return this;

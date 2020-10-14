@@ -14,18 +14,13 @@ public class MenuPage extends BasePage {
         super(driver);
     }
 
-    @Step("Checking whether the menu page opened")
+    @Deprecated
     public MenuPage isPageOpened() {
-        new ProductsPage(driver).isPageOpened();
-        AllureUtils.takeScreenshot(driver);
         return this;
     }
 
-    @Step("Opening product page for following opening burger menu page")
+    @Deprecated
     public MenuPage openPage() {
-        driver.get("https://www.saucedemo.com/inventory.html");
-        isPageOpened();
-        AllureUtils.takeScreenshot(driver);
         return this;
     }
 

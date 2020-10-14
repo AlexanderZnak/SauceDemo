@@ -32,7 +32,7 @@ public class LoginPage extends BasePage {
 
     @Step("Opening login page")
     public LoginPage openPage() {
-        driver.get("https://www.saucedemo.com/");
+        driver.get(URL);
         isPageOpened();
         AllureUtils.takeScreenshot(driver);
         return this;

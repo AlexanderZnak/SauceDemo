@@ -11,8 +11,8 @@ import static org.testng.Assert.fail;
 
 public class CartPage extends BasePage {
     public static final By CART = By.cssSelector("[data-icon='shopping-cart']");
-    public static final By CONTINUE_SHOPPING = By.cssSelector("[class='btn_secondary']");
-    public static final By CHECKOUT = By.cssSelector("[class='btn_action checkout_button']");
+    public static final By CONTINUE_SHOPPING = By.cssSelector(".btn_secondary");
+    public static final By CHECKOUT = By.cssSelector(".btn_action.checkout_button");
 
     public CartPage(WebDriver driver) {
         super(driver);
@@ -31,7 +31,7 @@ public class CartPage extends BasePage {
 
     @Step("Opening cart page")
     public CartPage openPage() {
-        driver.get("https://www.saucedemo.com/cart.html");
+        driver.get(URL + "/cart.html");
         isPageOpened();
         AllureUtils.takeScreenshot(driver);
         return this;
