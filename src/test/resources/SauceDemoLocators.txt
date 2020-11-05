@@ -1,0 +1,23 @@
+        driver.findElement(By.id("user-name")); //input login
+        driver.findElement(By.id("password")); //input password
+        driver.findElement(By.id("login-button")); //button login
+        driver.findElement(By.cssSelector("[data-icon='times-circle']")); // error button
+        driver.findElement(By.xpath("//button[text()='Open Menu']")); // button menu
+        driver.findElements(By.cssSelector("nav a"));// list of menu
+        driver.findElement(By.xpath("//button[text()='Close Menu']")); // button of closing
+        driver.findElement(By.cssSelector("[data-icon='shopping-cart']")); //basket
+        driver.findElements(By.cssSelector("select option")); // list of sort
+        driver.findElement(By.cssSelector("[class='product_sort_container']")); // select of sort
+        driver.findElements(By.xpath("//button[text()='ADD TO CART']")); // list of adding
+        driver.findElements(By.cssSelector("img.inventory_item_img")); // list of describing at images
+        driver.findElements(By.cssSelector("[class='inventory_item_name']")); // list of describing at a description
+        driver.findElements(By.xpath("//button[text()='REMOVE']")); // list of removing
+        driver.findElement(By.cssSelector("[class='inventory_details_back_button']")); // button back
+        driver.findElement(By.cssSelector("[class='btn_secondary']")); // button continue shopping
+        driver.findElement(By.cssSelector("[class='btn_action checkout_button']")); // button checkout
+        driver.findElement(By.cssSelector("[class='cart_cancel_link btn_secondary']")); // button cancel
+        driver.findElement(By.id("first-name")); // first name
+        driver.findElement(By.id("last-name")); // last name
+        driver.findElement(By.id("postal-code")); // zip/postal code
+        driver.findElement(By.cssSelector("[class='btn_primary cart_button']")).click(); // button continue
+        driver.findElement(By.cssSelector("[class='btn_action cart_button']")); // button finish
